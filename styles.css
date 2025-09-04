@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #424242;
+  font-family: Arial, sans-serif;
+}
+
+.clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 8px solid #0ff;
+  border-radius: 50%;
+  background-color: #222;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.hand {
+  position: absolute;
+  left: 50%;
+  transform-origin: 50% 100%; 
+  transform: rotate(90deg);
+}
+
+.hour {
+  width: 6px;
+  height: 60px;
+  background-color: #0ff;
+  top: calc(50% - 60px); 
+  z-index: 3;
+}
+
+.minute {
+  width: 4px;
+  height: 90px;
+  background-color: #0dd;
+  top: calc(50% - 90px);
+  z-index: 2;
+}
+
+.second {
+  width: 2px;
+  height: 110px;
+  background-color: red;
+  top: calc(50% - 110px);
+  z-index: 1;
+}
+
+
+.center-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: #0ff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+.number {
+  position: absolute;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.tick {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 10px;
+  background-color: #888;
+  transform-origin: center bottom;
+  z-index: 0;
+}
